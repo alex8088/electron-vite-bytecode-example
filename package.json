@@ -1,0 +1,51 @@
+{
+  "name": "electron-vite-bytecode-example",
+  "version": "1.0.0",
+  "description": "electron-vite source code protection example",
+  "main": "./out/main/index.js",
+  "author": "example.com",
+  "homepage": "https://www.electronjs.org",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:web": "vue-tsc --noEmit -p tsconfig.web.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "npm run build && electron-builder --win --config",
+    "build:mac": "npm run build && electron-builder --mac --config",
+    "build:linux": "npm run build && electron-builder --linux --config",
+    "test:fully": "electron-vite preview",
+    "test:foo": "electron-vite preview -c electron.vite.config.foo.ts",
+    "test:bug": "electron-vite preview --mode test",
+    "test:fixes": "electron-vite preview -c electron.vite.config.fixes.ts --mode test",
+    "test:keep": "electron-vite preview -c electron.vite.config.keep.ts"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^1.0.2",
+    "@electron-toolkit/utils": "^1.0.2"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@types/node": "16.11.22",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/eslint-config-typescript": "^11.0.0",
+    "electron": "^20.1.4",
+    "electron-builder": "^22.14.13",
+    "electron-notarize": "^1.2.1",
+    "electron-vite": "^1.0.9",
+    "eslint": "^8.22.0",
+    "eslint-plugin-vue": "^9.4.0",
+    "less": "^4.1.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.1.2",
+    "vue": "^3.2.39",
+    "vue-tsc": "^0.40.13"
+  }
+}
