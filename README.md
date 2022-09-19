@@ -129,7 +129,3 @@ result:
 ├──...
 └──package.json
 ```
-
-## Links
-
-- [Source Code Protection](https://evite.netlify.app/guide/source-code-protection.html)
