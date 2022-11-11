@@ -22,7 +22,8 @@
     "test:foo": "electron-vite preview -c electron.vite.config.foo.ts",
     "test:bug": "electron-vite preview -c electron.vite.config.bug.ts --mode test",
     "test:fixes": "electron-vite preview --mode test",
-    "test:keep": "electron-vite preview -c electron.vite.config.keep.ts"
+    "test:keep": "electron-vite preview -c electron.vite.config.keep.ts",
+    "test:multi": "electron-vite preview -c electron.vite.config.multi.ts"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^1.0.2",

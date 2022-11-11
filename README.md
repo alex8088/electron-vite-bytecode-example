@@ -77,7 +77,7 @@ result:
 
 Without transform arrow functions(the `transformArrowFunctions` option set `false`).
 
-Configure with [electron.vite.config.ts](./electron.vite.config.bug.ts) and `test` mode, run:
+Configure with [electron.vite.config.bug.ts](./electron.vite.config.bug.ts) and `test` mode, run:
 
 ```
 pnpm test:bug
@@ -91,7 +91,7 @@ The Electron app will crash without any error message.
 
 Set `transformArrowFunctions` option to `true`.
 
-Configure with [electron.vite.config.ts](./electron.vite.config.fixes.ts) and `test` mode, run:
+Configure with [electron.vite.config.ts](./electron.vite.config.ts) and `test` mode, run:
 
 ```
 pnpm test:fixes
@@ -125,6 +125,30 @@ result:
 │  │  ├──index.js           # entry file for electron
 │  │  └──index.jsc          # main chunk bytecode file
 │  ├──preload
+│  └──renderer
+├──...
+└──package.json
+```
+
+### Multiple Entries
+
+Configure with [electron.vite.config.multi.ts](./electron.vite.config.multi.ts), run:
+
+```
+pnpm test:multi
+```
+
+result:
+
+```bash
+.
+├──out /
+│  ├──main
+│  ├──preload /
+│  │  ├──bytecode-loader.js # bytecode loader
+│  │  ├──index.js           # index entry file
+│  │  ├──index.jsc          # index chunk bytecode file
+│  │  └──webview.jsc        # webview entry file
 │  └──renderer
 ├──...
 └──package.json
