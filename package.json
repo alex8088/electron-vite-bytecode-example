@@ -20,8 +20,8 @@
     "build:linux": "npm run build && electron-builder --linux --config",
     "test:fully": "electron-vite preview",
     "test:foo": "electron-vite preview -c electron.vite.config.foo.ts",
-    "test:bug": "electron-vite preview --mode test",
-    "test:fixes": "electron-vite preview -c electron.vite.config.fixes.ts --mode test",
+    "test:bug": "electron-vite preview -c electron.vite.config.bug.ts --mode test",
+    "test:fixes": "electron-vite preview --mode test",
     "test:keep": "electron-vite preview -c electron.vite.config.keep.ts"
   },
   "dependencies": {

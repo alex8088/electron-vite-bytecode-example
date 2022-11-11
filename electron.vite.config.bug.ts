@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin(), bytecodePlugin()]
+    plugins: [externalizeDepsPlugin(), bytecodePlugin({ transformArrowFunctions: false })]
   },
   preload: {
     plugins: [externalizeDepsPlugin()]

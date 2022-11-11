@@ -75,9 +75,9 @@ result:
 
 ### Assert Async Arrow Function Bug
 
-Without transform arrow functions(the `transformArrowFunctions` option default `false`).
+Without transform arrow functions(the `transformArrowFunctions` option set `false`).
 
-Configure with [electron.vite.config.ts](./electron.vite.config.ts) and `test` mode, run:
+Configure with [electron.vite.config.ts](./electron.vite.config.bug.ts) and `test` mode, run:
 
 ```
 pnpm test:bug
@@ -91,7 +91,7 @@ The Electron app will crash without any error message.
 
 Set `transformArrowFunctions` option to `true`.
 
-Configure with [electron.vite.config.fixes.ts](./electron.vite.config.fixes.ts) and `test` mode, run:
+Configure with [electron.vite.config.ts](./electron.vite.config.fixes.ts) and `test` mode, run:
 
 ```
 pnpm test:fixes

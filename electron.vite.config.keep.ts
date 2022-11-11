@@ -1,22 +1,13 @@
 import { resolve } from 'path'
-import { defineConfig, bytecodePlugin } from 'electron-vite'
+import { defineConfig, bytecodePlugin, externalizeDepsPlugin } from 'electron-vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   main: {
-    plugins: [bytecodePlugin({ removeBundleJS: false })],
-    build: {
-      rollupOptions: {
-        external: ['@electron-toolkit/utils']
-      }
-    }
+    plugins: [externalizeDepsPlugin(), bytecodePlugin({ removeBundleJS: false })]
   },
   preload: {
-    build: {
-      rollupOptions: {
-        external: ['@electron-toolkit/preload']
-      }
-    }
+    plugins: [externalizeDepsPlugin()]
   },
   renderer: {
     resolve: {
