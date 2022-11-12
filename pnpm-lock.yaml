@@ -12,7 +12,7 @@ specifiers:
   electron: ^20.1.4
   electron-builder: ^22.14.13
   electron-notarize: ^1.2.1
-  electron-vite: 1.0.13
+  electron-vite: 1.0.14
   eslint: ^8.22.0
   eslint-plugin-vue: ^9.4.0
   less: ^4.1.3
@@ -36,7 +36,7 @@ devDependencies:
   electron: 20.1.4
   electron-builder: 22.14.13
   electron-notarize: 1.2.1
-  electron-vite: 1.0.13_vite@3.2.3
+  electron-vite: 1.0.14_vite@3.2.3
   eslint: 8.23.1
   eslint-plugin-vue: 9.5.1_eslint@8.23.1
   less: 4.1.3
@@ -1625,8 +1625,8 @@ packages:
     resolution: {integrity: sha512-Sh/7YsHqQYkA6ZHuHMy24e6TE4eX6KZVsZb9E/DvU1nQRIrH4BflO/4k+83tfdYvDl+MObvlqHPRICzEdC9c6Q==}
     dev: true
 
-  /electron-vite/1.0.13_vite@3.2.3:
-    resolution: {integrity: sha512-WgmwoK6ZtNTHk88WvmyXbcUyz1mYembYX3ETV10um3tzcQdo5Dow0pMtJcvEknKfMpUH6M2xm8YonLqyoljMOg==}
+  /electron-vite/1.0.14_vite@3.2.3:
+    resolution: {integrity: sha512-lRg55OQoRIKhsFQnnbrhl2h1QEcjCwXWdE2MmVSjWVG03k4uc3Kli4oTud/WfV7kqUD7GUfsB0W8nXZlg4oN1w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
