@@ -7,7 +7,7 @@
 
 ---
 
-[Check out the documentation to learn more](https://evite.netlify.app/guide/source-code-protection.html).
+[Check out the documentation to learn more](https://electron-vite.org/guide/source-code-protection.html).
 
 ## Repo Setup
 
